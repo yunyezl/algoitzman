@@ -15,7 +15,7 @@ for i in range(1, len(S)):
         cnt += 1
     pre = S[i]
 
-result = cnt % 2 == 0 if cnt // 2 else cnt // 2 + 1
+result = cnt % 2 == 0 and cnt // 2 or cnt // 2 + 1
 
 if cnt <= 0:
     print("0")
