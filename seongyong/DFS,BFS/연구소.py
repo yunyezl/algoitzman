@@ -43,7 +43,7 @@ def checkVirus(map):
                 safe += 1
     return safe
 
-# 너비 우선 탐색 (바이러스 지점으로 부터 너비 우선 탐색)
+# 깊이 우선 탐색 (바이러스 지점으로 부터 우선 탐색)
 def dfs(graph, x,y):
     for i in range(4):
         nx = x + dx[i]
@@ -55,7 +55,7 @@ def dfs(graph, x,y):
                     que.append((nx, ny))
 
 
-# 깊이 우선 탐색 (virus 지역 우선 탐색)
+# 너비 우선 탐색 (virus 지역 우선 탐색)
 def bfs(graph):
     while que:
         x, y = que.popleft()
