@@ -20,9 +20,7 @@ for i in range(n):
             house_list.append([i+1, j+1])
         elif arr[j] == 2:
             chicken_list.append([i+1, j+1, 0])
-print("집", house_list)
 # x좌표, y좌표, 점수 - 각 집에서 치킨집마다 걸리는 거리의 합이 작은 순
-print("치킨집", chicken_list)
 
 # 집마다 가장 가까운 치킨집 번호와 거리를 저장
 for i in house_list:
@@ -31,12 +29,10 @@ for i in house_list:
         # 각 집에서 치킨집마다 걸리는 거리의 합이 기준!
         chicken_list[j][2] += now_dis
 
-print("치킨집 점수", chicken_list)
 # 점수가 낮은 것으로 오름차순 정렬
 chicken_list.sort(key=lambda x:x[2])
 best_chicken = chicken_list[:m]
 
-print("베스트 치킨집", best_chicken)
 
 # 선정된 치킨집과의 거리 최솟값 구하기
 for i in house_list:
