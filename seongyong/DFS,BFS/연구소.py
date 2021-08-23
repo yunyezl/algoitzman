@@ -43,23 +43,18 @@ def checkVirus(map):
                 safe += 1
     return safe
 
-# 깊이 우선 탐색 (바이러스 지점으로 부터 우선 탐색)
-def dfs(graph, x,y):
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
-        if nx >= 0 and ny >= 0 and nx < n and ny < m:
-            if graph[nx][ny] != 1:
-                if graph[nx][ny] == 0:
-                    graph[nx][ny] = 2
-                    que.append((nx, ny))
-
-
-# 너비 우선 탐색 (virus 지역 우선 탐색)
+# 너비 우선 탐색 (virus 지역 기준 우선 탐색)
 def bfs(graph):
     while que:
         x, y = que.popleft()
-        dfs(graph, x, y)
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if nx >= 0 and ny >= 0 and nx < n and ny < m:
+                if graph[nx][ny] != 1:
+                    if graph[nx][ny] == 0:
+                        graph[nx][ny] = 2
+                        que.append((nx, ny))
 
 
 # 벽 세개를 지을 수 있는 모든 경우의 수
