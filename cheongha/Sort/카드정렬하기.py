@@ -31,7 +31,6 @@ result = 0
 while True:
     if len(q) == 1:
         break
-    print(q)
     x1 = heapq.heappop(q)
     x2 = heapq.heappop(q)
     result += x1 + x2
