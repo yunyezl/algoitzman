@@ -1,3 +1,7 @@
+# p.359
+# 2021-08-25 11:10-11:30
+# https://www.acmicpc.net/problem/10825
+
 # n 입력받기
 n = int(input())
 
