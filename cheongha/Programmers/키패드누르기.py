@@ -1,5 +1,5 @@
 # Level 1
-# 2021-09-17 14:40-
+# 2021-09-17 14:40-15:40
 # https://programmers.co.kr/learn/courses/30/lessons/67256
 
 keypad = {0:(3, 1), 1:(0, 0), 2:(0, 1), 3:(0, 2),
